@@ -1,0 +1,127 @@
+body{margin: 0;}
+.allpage{
+    height:100vh;
+    width:100%;
+    
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   align-items: flex-start;
+   justify-content: flex-start;
+}
+.bigpicture{margin-left:2%;width:45%; height:70vh;background-size: 100%;background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column-reverse;
+    margin-top: 2%;
+}
+header{
+    width:100%; height: 20vh;
+    background-color:goldenrod;
+}
+.few{
+ width:53%;height:75vh;
+
+}
+.divupw{height:15%;width:80%;
+
+margin-left: 18%;
+text-align: center;
+display: flex;
+justify-content: space-around;
+
+}
+.three{
+    height:80%;width:80%;
+   
+    margin-left: 18%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 1%;
+}
+.thefirst,.thesecond,.thethird{
+ height: 40%;   width: 40%;
+ background-repeat: no-repeat;
+ background-size: 100%;
+ border-radius: 2.5%;
+border:1.5px solid rgb(76, 69, 69);
+ box-shadow:rgb(61, 56, 56) 2px 2px 1px 1px
+
+}
+.thethird{margin-left: 46.2%;}
+.datails{
+ height:24% ;  width:100%;
+ ;display: flex;}
+ .right,.left{
+height:100%;
+width:50%;
+text-align: right;
+ }
+ .right{display: flex;justify-content: space-evenly; align-items: center;}
+ .theid,.therooms,.theporch,.theprice,.themeter{
+    width:15%;
+    height:100%;
+    
+    text-align: center;
+    color:rgb(136, 13, 13);
+    font-size: larger;
+ }
+ .themeter{
+    background-image: url("../images/meter.png");
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: center;
+ }
+ .theporch{
+    background-image: url("../images/porch.png");
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: center; 
+ }
+ .therooms{
+    background-image: url("../images/rooms.png");
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: center;  
+ }
+ .theid{
+    background-image: url("../images/id.png");
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: center;  
+
+ }
+ .theprice{
+    background-image: url("../images/cost.png");
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: center;  
+
+ }
+ .sold{
+    background-image: url("../images/sold.png");
+    width:100%;
+    height:100%;
+    background-size: 100%;
+   }
+   .bigpicture:hover{
+    .forbuy{
+        width: 100%;
+        height: 20%;
+        background-color: blanchedalmond;
+       }
+       .buy{
+        display: inline;
+       }
+
+   }
+   .buy{
+    display: none;
+   }
+   .towrite{
+    font-size: 30px;
+    color:rgb(152, 10, 10);
+   }
+   

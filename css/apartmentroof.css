@@ -1,0 +1,118 @@
+header{
+    height: 20vh;
+    width: 100%;
+    background-color:rgb(9, 255, 0)
+}
+.aproof{
+    text-align:center ;
+    display:flex;
+    flex-wrap: wrap;
+    background-color: rgb(232, 232, 232);
+    margin-top: 0%;
+    flex-direction: row-reverse;
+    /* gap:3%; */
+}
+.find{
+    width: 100vw;
+    height: 15vh;
+    background-color: aqua;
+}
+.a{
+    background-color: rgb(255, 255, 255);
+    width:25%;
+    height: 55vh;
+    margin-top: 2%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* align-items: stretch; */
+    border-radius: 4%;
+    margin-right: 5%;
+    border:2px solid rgb(255, 255, 255);
+    /* box-shadow:rgb(255, 255, 255) 2px 3px 3px 1px; */
+}
+.a:hover{
+    border:2px solid rgb(213, 213, 213);
+    box-shadow: rgb(213,213,213) 2px 2px 3px 1px;
+    transition: 0.3s;
+}
+.under_pic{
+    height: 35%;
+    width: 95%;
+    background-color: aquamarine;
+    margin-bottom: 2%;
+    margin-right: 2%;
+    display: flex;
+}
+.under_pic_left{
+    background-color: rgb(255, 255, 255);
+    height: 100%;
+    width: 50%;
+    display: flex;
+    align-items: flex-end;
+}
+.under_pic_right{
+    background-color: rgb(255, 255, 255);
+    height: 100%;
+    width: 50%;
+    display: flex;
+    justify-content:flex-end;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: flex-end;
+}
+.pic_right{
+    display: flex;
+}
+.pic_left{
+    display: flex;
+}
+.to_look{
+    height: 25%;
+    width: 80%;
+    background-color: rgb(255, 255, 255);
+    text-decoration: none;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 8px;
+    margin-left: 5%;
+    margin-bottom: 15%;
+    display: flex;
+}
+.to_look:hover{
+    background-color: rgb(240, 240, 240);
+    transition: 0.8s;
+}
+.the_price{
+    background-color: rgb(255, 255, 255);
+    height: 20%;
+    width: 60%;
+    margin-bottom: 10%;
+}
+.the_area{
+    background-color: rgb(255, 255, 255);
+    height: 20%;
+    width: 50%;
+}
+.the_room{
+    background-color: rgb(255, 255, 255);
+    height: 20%;
+    width: 40%;
+    margin-top: 10%;
+}
+.myfirstpic{
+    width:96%;
+    height: 85%;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    border-radius: 4%;
+    margin-top: 1%;
+}
+.sold{
+    width: 100%;
+    height: 100%;
+    background-image: url("../images/sold.png");
+    background-size: 100%;
+}
+.addclass{
+    background-size: 100%;
+}
