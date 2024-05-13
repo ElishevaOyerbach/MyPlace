@@ -4,105 +4,20 @@ header{
     background-image: url("../images/header.png");
     background-size: 100%;
     background-repeat: no-repeat;
+    box-shadow: 20px 7px 20px rgba(43, 8, 37, 0.2);
 }
-/* .buttomheader{
-height:40%;
-width: 100%;
-background-color: rgb(211, 209, 209);
-display: flex;
-justify-content: space-around;
-}
-.topheader{
-    height:60%;
-    width: 100%;
-    background-color:white;
-display: flex; justify-content: flex-end;}
-.rightbuttomheader{
 
-width:30%;
-height:100%;
-background-color: rgb(134, 37, 37);
-display: flex;
-justify-content: space-around;
-}
-.leftbuttomheader{
-    width:30%;
-    height:100%;
-    background-color: rgb(134, 37, 37);
-    display: flex;
-    justify-content: space-around;
-}
-.inbuttomheader{
-    height:100%;
-    width:33%;
-background-color: rgb(159, 154, 154);
-display: flex;
-justify-content:center;
-align-items: center;
-}
-.logo{
-  background-image: url("../images/LOGO1-1.png");
-  width:16%;
-  height: 100%;
-  background-repeat: no-repeat;
- margin-left: 22%;
-
-}
-a{
-    text-decoration: none;
-    font-size: x-large;
-    color:rgb(56, 54, 54)
-}
-.pphone{
-margin-left: 1%;
-font-size: 25px;
-margin-top: 10%;
-
-}
-.headerphone{
-    width:15%;
-    height:100%;
-   margin-left: 5%;
-   display: flex;
-   align-items: flex-start;
-   justify-content: flex-end;
-   flex-direction: row-reverse;
-
-}
-.picphone{
-width:15%;
-height: 50%;
-background-size: 100%;
-background-image: url("../images/phone.png");
-margin-top: 10%;
-margin-right: 5%;
-background-repeat: no-repeat;
-
-
-}
-.picphone:hover{
-background-image: url("../images/phone1.png");
-}
-.yousale{
-    height: 100%;
-    width: 100%;
-    background-color: red;
-   
-    background-image:url("../images/sale.png") ;
-    background-repeat: no-repeat;
-    border-radius: 5px;
-   
-}
-.link{
-    height: 80%;
-    width: 15%; margin-left: 18%;
-     margin-top: 0.2%;
-    
-} */
 .top_header{
     height: 50%;
-    background-color: aqua;
+    
     width: 100%;
+}
+.top_forrishum{
+    height: 70%;
+    width: 20%;
+    background-color: rgb(255, 255, 255);
+    margin-right: 10%;
+    margin-top: 1.2%;
 }
 .bottom_header{
     height: 50%;
@@ -140,3 +55,77 @@ background-image: url("../images/phone1.png");
     width: 100%;
     background-color: aqua;
 }
+
+
+
+
+
+button {
+    padding: 0;
+    margin: 0;
+    border: none;
+    background: none;
+    cursor: pointer;
+  }
+  
+  button {
+    --primary-color: #111;
+    --hovered-color: #c84747;
+    position: relative;
+    display: flex;
+    font-weight: 600;
+    font-size: 20px;
+    gap: 0.5rem;
+    align-items: center;
+  }
+  
+  button p {
+    margin: 0;
+    position: relative;
+    font-size: 20px;
+    color: var(--primary-color);
+  }
+  
+  button::after {
+    position: absolute;
+    content: "";
+    width: 0;
+    left: 0;
+    bottom: -7px;
+    background: var(--hovered-color);
+    height: 2px;
+    transition: 0.3s ease-out;
+  }
+  
+  button p::before {
+    position: absolute;
+    /*   box-sizing: border-box; */
+    content: "לכניסה או רישום";
+    width: 0%;
+    inset: 0;
+    color: var(--hovered-color);
+    overflow: hidden;
+    transition: 0.3s ease-out;
+  }
+  
+  button:hover::after {
+    width: 100%;
+  }
+  
+  button:hover p::before {
+    width: 100%;
+  }
+  
+  button:hover svg {
+    transform: translateX(4px);
+    color: var(--hovered-color);
+  }
+  
+  button svg {
+    color: var(--primary-color);
+    transition: 0.2s;
+    position: relative;
+    width: 15px;
+    transition-delay: 0.2s;
+  }
+  

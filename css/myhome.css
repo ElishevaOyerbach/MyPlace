@@ -1,24 +1,21 @@
-body {
+body{
     margin: 0%;
 }
-
-* {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+*{
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+   
 }
-
-#all {
+#all{
     height: 100vh;
     width: 100%;
-
+    
     display: flex;
     align-items: flex-end;
     justify-content: space-evenly;
     flex-wrap: wrap;
-}
-
-#imageandform {
-
-    height: 82%;
+}#imageandform{
+ 
+    height: 81%;
     width: 100%;
     display: flex;
     align-items: normal;
@@ -29,150 +26,186 @@ body {
     background-size: 100%;
     background-repeat: no-repeat;
 }
-
 @keyframes try {
     0% {
         background-image: url("../images/home1.jpg");
     }
-
+  
     33% {
         background-image: url("../images/home2.jpeg");
     }
-
+  
     66% {
         background-image: url("../images/home3.jpg");
     }
-
+  
     100% {
         background-image: url("../images/home4.jpeg");
     }
-
-
-}
-
-.form {
+  
+    
+  }
+.form{
     height: 70%;
     width: 20%;
     background-color: rgb(116, 113, 110);
-    margin-right: 10%;
+    margin-right:10% ;
     border-radius: 4%;
-    opacity: 0.5;
-    position: relative;
-
+   opacity: 0.5;
+  position: relative;
+    
 }
 
-.inform {
-
-    position: absolute;
-    right: 11%;
+.inform{
+   
+   position: absolute;
+  right: 11%;
 
     background-color: white;
     height: 53%;
     width: 18%;
-    opacity: 0.9;
+   opacity: 0.9;
     border-radius: 4%;
 
 }
-
-.area {
-
-    height: 8%;
+.area{
+   
+    height:8% ;
     padding-top: 10%;
-    margin-right: 2%;
-
+  margin-right: 2%;
+    
 }
-
-.selectarea {
-    margin-top: 2%;
-    height: 80%;
-    width: 90%;
+.selectarea{margin-top: 2%; height:80%;width:90%;
     background-color: rgb(235, 230, 233);
     opacity: 0.9;
-
+   
 }
-
-.option {
-
+.option{
+  
     margin-right: 2%;
-    height: 8%;
+    height:8% ;
     padding-top: 2%;
 }
-
-.mafyen {
-    margin-top: 2%;
-    height: 80%;
-    width: 90%;
+.mafyen{
+    margin-top: 2%; height:80%;width:90%;
     background-color: rgb(232, 219, 226);
     opacity: 0.9;
-
+  
 }
-
-.numrooms {
-    height: 14%;
-    margin-top: 2%;
-    margin-right: 2%;
+.numrooms{height:14%;margin-top: 2%; margin-right: 2%;}
+.money{height:14%;margin-top: 2%;margin-right: 2%;}
+.l{
+    width:80%;
+    height:18%;
 }
-
-.money {
-    height: 14%;
-    margin-top: 2%;
-    margin-right: 2%;
+.num{
+    font-size:medium;
+    color:rgb(56, 54, 54);
+    color:rgb(129, 5, 5);
 }
-
-.l {
-    width: 80%;
-    height: 8%;
-}
-
-.num {
-    font-size: large;
-    color: rgb(56, 54, 54);
-    color: rgb(129, 5, 5);
-}
-
-.tvach {
-    font-size: larger;
-    color: rgb(56, 54, 54);
+.tvach{
+    font-size:medium;
+    color:rgb(56, 54, 54);
     margin-right: 42%;
-    color: rgb(129, 5, 5);
+    color:rgb(129, 5, 5);
 }
-
-.tvacha {
-    font-size: medium;
-    color: rgb(56, 54, 54);
+.tvacha{
+    font-size:medium;
+    color:rgb(56, 54, 54);
     margin-right: 10%;
-    color: rgb(129, 5, 5);
+    color:rgb(129, 5, 5);
 }
-
-#demo {
-    font-size: medium;
+#demo{
+    font-size:medium;
     margin-right: 38%;
-    color: rgb(129, 5, 5);
+    color:rgb(129, 5, 5);
 }
-
-#demo2 {
-    font-size: medium;
+#demo2{
+    font-size:medium;
     margin-right: 18%;
-    color: rgb(129, 5, 5);
+    color:rgb(129, 5, 5);
 }
 
-.br {
+
+
+
+
+
+
+
+
+.cta {
+    position: relative;
+    margin: auto;
+    padding: 12px 18px;
+    transition: all 0.2s ease;
+    border: none;
+    background: none;
+    cursor: pointer;
+  }
+  
+  .cta:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    border-radius: 50px;
+    background: #6d0606;
+    opacity: 0.5;
+    width: 45px;
+    height: 45px;
+    transition: all 0.3s ease;
+  }
+  
+  .cta span {
+    position: relative;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: #6d0606;
+  }
+  
+  .cta svg {
+    position: relative;
+    top: 0;
+    margin-left: 10px;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke: #6d0606;;
+    stroke-width: 2;
+    transform: translateX(-5px);
+    transition: all 0.3s ease;
+  }
+  
+  .cta:hover:before {
+    width: 100%;
+    background:  #9c9797;
+  }
+  
+  .cta:hover svg {
+    transform: translateX(0);
+  }
+  
+  .cta:active {
+    transform: scale(0.95);
+  }
+.br{
     width: 100%;
     background-color: white;
 }
-
-.br1 {
+.br1{
     height: 5%;
 }
-
-.br2 {
+.br2{
     height: 5%;
 }
-
-.br3 {
+.br3{
     height: 40%;
 }
-
-.br4 {
+.br4{
     height: 10%;
 }
+  

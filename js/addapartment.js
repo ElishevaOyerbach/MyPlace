@@ -4,9 +4,7 @@ all_apartment=JSON.parse(localStorage.getItem("apartmentsarr"));
 
 document.querySelector(".biti").onclick=function(){
 
-  swal("הדירה נוספה בהצלחה!!!!", "ניצור איתך קשר במקרה הצורך...", "success");
-
-
+  Swal.fire({title:"הדירה נוספה בהצלחה",text:"ניצור איתך קשר",icon:"success"})
     let p=document.querySelector(".price").value;
     let mr=document.querySelector(".shetach").value;
     let r=document.querySelector(".numrooms").value;

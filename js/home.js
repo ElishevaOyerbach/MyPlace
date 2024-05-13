@@ -19,10 +19,10 @@
     localStorage.setItem("apartmentsarr",str);
     let users=[{name:'אלישבע',
     id:215280678,
-    email:'elisheva71533@gmail.com'},
+    },
     {name:'אסתי',
     id:215280679,
-    email:'s0504172669@gmail.com'},
+    },
   ];
 let myarruser=localStorage.getItem("usersarr");
 let correntusers;
@@ -44,6 +44,7 @@ localStorage.setItem("usersarr",s2);
   var slider2=document.getElementById("selectmoney");
   var output2=document.getElementById("demo2");
   output2.innerHTML=slider2.value;
+  let bool="false";
   document.querySelector(".forrishum").onclick=function(){
     (async () => {
       const { value: formValues } = await Swal.fire({
@@ -56,16 +57,29 @@ localStorage.setItem("usersarr",s2);
         preConfirm: () => {
           let x= document.getElementById("swal-input1").value;
           let y=document.getElementById("swal-input2").value;
+          for(let i=0;i<correntusers.length;i++) 
+          {
+            if(correntusers[i].name==x&& correntusers[i].id==y)
+               { bool="true";
 
-     
-          return [
-           document.getElementById("swal-input1").value,
-           document.getElementById("swal-input2").value
-          ];
+               }    
+          }
+          if(bool=="false")
+          {
+            const newname={
+              name:x,id:y
+            }
+            correntusers.push(newname);
+            const f=JSON.stringify(correntusers);
+            localStorage.setItem("usersarr",f);
+          }
         }
       });
-      if (formValues) {
-        Swal.fire(JSON.stringify(formValues));
+      if (formValues&&bool=="true") {
+        Swal.fire(JSON.stringify('שמך כבר רשום במערכת'));
+      }
+      if (formValues&&bool=="false") {
+        Swal.fire(JSON.stringify('לקוח חדש, פרטיך נרשמו במערכת'));
       }
       
       
@@ -73,7 +87,15 @@ localStorage.setItem("usersarr",s2);
   }
     // //פונקציה זו יוצרת קישור בהתאם לנתונים
   slider2.oninput=function(){
-    output2.innerHTML=this.value;if(flag=="false"){ document.querySelector(".l").innerHTML+=`<a href="apartments.html?area=${document.querySelector(".selectarea").value}&rooms=${document.querySelector("#selectrooms").value}&many=${document.querySelector("#selectmoney").value}">חפש לי</a>`; flag="true"}
+    output2.innerHTML=this.value;if(flag=="false"){ document.querySelector(".l").innerHTML+=`<a href="apartments.html?area=${document.querySelector(".selectarea").value}&rooms=${document.querySelector("#selectrooms").value}&many=${document.querySelector("#selectmoney").value}">
+    <button class="cta">
+                    <span class="l">Get Started</span>
+                    <svg width="15px" height="10px" viewBox="0 0 13 10">
+                      <path d="M1,5 L11,5"></path>
+                      <polyline points="8 1 12 5 8 9"></polyline>
+                    </svg>
+                  </button>
+    </a>`; flag="true"}
 
 }
 //    
