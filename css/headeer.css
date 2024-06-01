@@ -1,59 +1,69 @@
-header{
-    height: 19vh;
-    width: 100%;
-    background-image: url("../images/header.png");
-    background-size: 100%;
-    background-repeat: no-repeat;
-    box-shadow: 20px 7px 20px rgba(43, 8, 37, 0.2);
+header {
+  height: 19vh;
+  width: 100%;
+  background-image: url("../images/header.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  box-shadow: 20px 7px 20px rgba(43, 8, 37, 0.2);
 }
 
-.top_header{
-    height: 50%;
-    
-    width: 100%;
+.top_header {
+  height: 50%;
+
+  width: 100%;
 }
-.top_forrishum{
-    height: 70%;
-    width: 20%;
-    background-color: rgb(255, 255, 255);
-    margin-right: 10%;
-    margin-top: 1.2%;
+
+.top_forrishum {
+  height: 70%;
+  width: 20%;
+  background-color: rgb(255, 255, 255);
+  margin-right: 10%;
+  margin-top: 1.2%;
 }
-.bottom_header{
-    height: 50%;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
+
+.bottom_header {
+  height: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 }
-.right{
-    height: 100%;
-    width: 40%;
-    display: flex;
-    justify-content: center
+
+.right {
+  height: 100%;
+  width: 40%;
+  display: flex;
+  justify-content: center
 }
-.left{
-    height: 100%;
-    width: 40%;
-    display: flex;
-    justify-content: flex-start
+
+.left {
+  height: 100%;
+  width: 40%;
+  display: flex;
+  justify-content: flex-start;
+
 }
-.in{
-    height: 100%;
-    width: 20%;
-    margin-left: 5%;
-    /* background-color: blanchedalmond; */
+
+.in {
+
+  height: 100%;
+  width: 20%;
+  margin-left: 5%;
+
 }
-.d1{
-    margin-right: 17%;
-    
+
+.d1 {
+  margin-right: 17%;
+
 }
-.d5{
-    margin-left: 1%;
+
+.d5 {
+  margin-left: 1%;
 }
-.the_a{
-    height: 100%;
-    width: 100%;
-    background-color: aqua;
+
+.the_a {
+  height: 100%;
+  width: 100%;
+  background-color: aqua;
 }
 
 
@@ -61,71 +71,70 @@ header{
 
 
 button {
-    padding: 0;
-    margin: 0;
-    border: none;
-    background: none;
-    cursor: pointer;
-  }
-  
-  button {
-    --primary-color: #111;
-    --hovered-color: #c84747;
-    position: relative;
-    display: flex;
-    font-weight: 600;
-    font-size: 20px;
-    gap: 0.5rem;
-    align-items: center;
-  }
-  
-  button p {
-    margin: 0;
-    position: relative;
-    font-size: 20px;
-    color: var(--primary-color);
-  }
-  
-  button::after {
-    position: absolute;
-    content: "";
-    width: 0;
-    left: 0;
-    bottom: -7px;
-    background: var(--hovered-color);
-    height: 2px;
-    transition: 0.3s ease-out;
-  }
-  
-  button p::before {
-    position: absolute;
-    /*   box-sizing: border-box; */
-    content: "לכניסה או רישום";
-    width: 0%;
-    inset: 0;
-    color: var(--hovered-color);
-    overflow: hidden;
-    transition: 0.3s ease-out;
-  }
-  
-  button:hover::after {
-    width: 100%;
-  }
-  
-  button:hover p::before {
-    width: 100%;
-  }
-  
-  button:hover svg {
-    transform: translateX(4px);
-    color: var(--hovered-color);
-  }
-  
-  button svg {
-    color: var(--primary-color);
-    transition: 0.2s;
-    position: relative;
-    width: 15px;
-    transition-delay: 0.2s;
-  }
-  
+  padding: 0;
+  margin: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+button {
+  --primary-color: #111;
+  --hovered-color: #c84747;
+  position: relative;
+  display: flex;
+  font-weight: 600;
+  font-size: 20px;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+button p {
+  margin: 0;
+  position: relative;
+  font-size: 20px;
+  color: var(--primary-color);
+}
+
+button::after {
+  position: absolute;
+  content: "";
+  width: 0;
+  left: 0;
+  bottom: -7px;
+  background: var(--hovered-color);
+  height: 2px;
+  transition: 0.3s ease-out;
+}
+
+button p::before {
+  position: absolute;
+
+  content: "לכניסה או רישום";
+  width: 0%;
+  inset: 0;
+  color: var(--hovered-color);
+  overflow: hidden;
+  transition: 0.3s ease-out;
+}
+
+button:hover::after {
+  width: 100%;
+}
+
+button:hover p::before {
+  width: 100%;
+}
+
+button:hover svg {
+  transform: translateX(4px);
+  color: var(--hovered-color);
+}
+
+button svg {
+  color: var(--primary-color);
+  transition: 0.2s;
+  position: relative;
+  width: 15px;
+  transition-delay: 0.2s;
+}

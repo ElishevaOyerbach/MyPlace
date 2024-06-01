@@ -7,36 +7,92 @@
     <link rel="stylesheet" href="../css/headeer.css">
     <link rel="stylesheet" href="../css/sweetalert2.css">
     <link rel="stylesheet" href="../css/sweetalert2.css">
+   <link rel="stylesheet"  href="../css/addapartment.css">
 </head>
-<body  dir="rtl">
+<body dir="rtl" >
     <header>
-        <div class="topheader"><a class="link" href="../html/addapartment.html"><div class="yousale"></div></a>
-          <div  class="logo">
+        <div class="top_header">
+            <div class="top_forrishum">
+            <button class="forrishum">
+              <p> לכניסה או רישום</p>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="4"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M14 5l7 7m0 0l-7 7m7-7H3"
+                ></path>
+              </svg>
+            </button>
+          </div>
+            
             
           </div>
-          <div class="headerphone">
-           <p class="pphone">0534171533</p>
-           <div class="picphone"></div>
+          <div class="bottom_header">
+            <div class="right">
+                <a href="../html/allapartmentforsale.html" class="in d1"></a>
+                <a href="../html/apartmentroof.html" class="in d2"></a>
+                <a href="../html/newprojecthous.html" class="in d3"></a>
+            </div>
+            <div class="left">
+              <a href="../html/hasraa.html"class="in d4"></a>
+              <a  href="../html/aboutus.html"class="in d5"></a>
+              <a href="../html/myhome.html"class="in d6"></a>
+            </div>
           </div>
+          
     </header>
     <div class="newapartment">
-        <P>enter price</P>
+        <div class="theform">
+        <div class="ini">
+        <P >הכנס מחיר</P>
+        
         <input type="number" class="price">
-        <p> enter nummeter</p>
+        <img src="../images/cost.png">
+        </div>
+        <div class="ini">
+        <p>הכנס מס' מטרים</p>
         <input type="number" class="shetach">
-        <p>enter num rooms</p>
+        <img src="../images/meter.png">
+       </div>
+       <div class="ini">
+        <p>הכנס מס' חדרים 3-5</p>
         <input type="number" class="numrooms">
-        <br>
-        <select  class="selectarea" ><option>בחר איזור</option><option>מרכז</option><option>פריפריה</option><option>צפון</option><option>דרום</option></select>
-        <p>there is porch</p>
+        <img src="../images/rooms.png">
+       </div>
+       <div class="ini">
+        <p>בחר אזור</p>
+        <select  class="selectarea" ><option>בחר איזור</option><option>מרכז</option><option>צפון</option><option>דרום</option></select>
+        <img src="../images/ar.png">
+        </div>
+        <div class="ini">
+        <p>קימת מרפסת:</p>
         <input type="checkbox" class="isporch">
+        <img src="../images/porch.png" class="po">
+        </div>
+        <div class="ini">
+            
         <p>בחר קובץ לתמונה</p>
-        <input type="file">
-        <br>
+        <input type="file" class="immm">
+        <img src="../images/pic.png">
+        </div>
+        <div class="ini"><p>הוסף פירוט (ללא רווח)</p>
         <textarea class="more" row="12" cols="15" placeholder="פרוט"></textarea>
-        <br>
+        <img src="../images/more.png" class="mo">
+       </div>
+       <div class="ini">
+        <p>אני מוכר</p>
+        
        <input type="button" class="biti">
-  
+       <img src="../images/id.png">
+    </div>
+       </div>
       </div> 
 </body>
 </html>
@@ -45,3 +101,4 @@
 <script src="../js/sweetalert2.min.js"></script>
 <script src="../js/sweetalert2.all.js"></script>
 <script src="../js/sweetalert2.js"></script>
+<script src="../js/heserpge.js"></script>

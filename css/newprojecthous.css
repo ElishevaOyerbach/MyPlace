@@ -1,0 +1,34 @@
+header{
+    height: 19vh;
+    width: 100%;
+}
+*{
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+   
+}
+body{
+    margin: 0%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.all_page{
+    height: 130vh;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-wrap: wrap;
+}
+.pic_1,.pic_2{
+    height: 60%;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+.pic_1{
+    height: 40%;
+    background-image: url("../images/newproject2.png");
+}
+.pic_2{
+    background-image: url("../images/newproject1.png");
+}

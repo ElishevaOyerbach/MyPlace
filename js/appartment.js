@@ -1,6 +1,7 @@
 let all_apartment;
 all_apartment=JSON.parse(localStorage.getItem("apartmentsarr"));
-
+let correntusers;
+correntusers=JSON.parse(localStorage.getItem("usersarr"));
 
 function start(){
   const a=location.search;
@@ -85,10 +86,18 @@ function start(){
            document.querySelector(".theid").innerHTML+=`<p class="themore">${y}</p>`;
            
            if(all_apartment[i].was_bought=="no"){
+            document.querySelector(".bigpicture").classList.add("card");
             const divforbuy=document.createElement('div');
-            divforbuy.classList.add("forbuy")
+            divforbuy.classList.add("forbuy");
+            divforbuy.classList.add("card-img");
+            divforbuy.innerHTML+=`<div class="card-info" id="y${i+1}">
+            <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"></path></svg>
+            
+            <p class="text-body"><a class="buy" href=form.html?cost=${all_apartment[i].price}&id=${all_apartment[i].id}>לרכישה</a></p>
+          
+          </div>`
             document.querySelector(".bigpicture").prepend(divforbuy)
-            document.querySelector(".forbuy").innerHTML+=`<a class="buy" href=form.html?cost=${all_apartment[i].price}&id=${all_apartment[i].id}>לרכישה</a>`
+            // document.querySelector(".forbuy").innerHTML+=`<a class="buy" href=form.html?cost=${all_apartment[i].price}&id=${all_apartment[i].id}>לרכישה</a>`
            }
          
        }
@@ -97,3 +106,45 @@ function start(){
 
   
 }
+//רישום
+let bool="false";
+  document.querySelector(".forrishum").onclick=function(){
+    (async () => {
+      const { value: formValues } = await Swal.fire({
+        title: " הכנס שם משתמש וסיסמה",
+        html: `
+          <input id="swal-input1" class="swal2-input" placeholder=" שם" class="myname">
+          <input id="swal-input2" class="swal2-input" placeholder=" תעודת זהות">
+        `,
+        focusConfirm: false,
+        preConfirm: () => {
+          let x= document.getElementById("swal-input1").value;
+          let y=document.getElementById("swal-input2").value;
+          for(let i=0;i<correntusers.length;i++) 
+          {
+            if(correntusers[i].name==x&&correntusers[i].id==y)
+               { bool="true";
+
+               }    
+          }
+          if(bool=="false")
+          {
+            const newname={
+              name:x,id:y
+            }
+            correntusers.push(newname);
+            const f=JSON.stringify(correntusers);
+            localStorage.setItem("usersarr",f);
+          }
+        }
+      });
+      if (formValues&&bool=="true") {
+        Swal.fire(JSON.stringify('שמך כבר רשום במערכת'));
+      }
+      if (formValues&&bool=="false") {
+        Swal.fire(JSON.stringify('לקוח חדש, פרטיך נרשמו במערכת'));
+      }
+      
+      bool="false";
+  })()
+  }

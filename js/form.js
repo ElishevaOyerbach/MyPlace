@@ -1,7 +1,9 @@
 
+// let correntusers;
+// correntusers=JSON.parse(localStorage.getItem("usersarr"));
 let all_apartment;
 all_apartment=JSON.parse(localStorage.getItem("apartmentsarr"));
-document.querySelector(".weegoingtofinish").onclick=function()
+document.querySelector(".the_btm_end").onclick=function()
 {
 
     const lo=location.search;

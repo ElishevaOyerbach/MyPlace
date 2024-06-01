@@ -2,9 +2,12 @@ let timerInterval;
 
 
 
+let correntusers;
+correntusers=JSON.parse(localStorage.getItem("usersarr"));
 let all_apartment;
 all_apartment=JSON.parse(localStorage.getItem("apartmentsarr"));
 function begin(){
+ 
   
     const strparm=location.search;
     const searchparms=new URLSearchParams(strparm);
@@ -37,10 +40,9 @@ function begin(){
     document.getElementById(`card${i+1}`).innerHTML=`<div class="card-img" id="${i+1}ba${i+1}" ></div>`;
     document.getElementById(`${i+1}ba${i+1}`).style.backgroundImage+=`url(${goodapartments[i].big_image})`;
     document.getElementById(`${i+1}ba${i+1}`).innerHTML+=`<div class="card-info" id="y${i+1}">
-    <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"></path><path d="M4.828 21l-.02.02-.021-.02H2.992A.993.993 0 0 1 2 20.007V3.993A1 1 0 0 1 2.992 3h18.016c.548 0 .992.445.992.993v16.014a1 1 0 0 1-.992.993H4.828zM20 15V5H4v14L14 9l6 6zm0 2.828l-6-6L6.828 19H20v-1.172zM8 11a2 2 0 1 1 0-4 2 2 0 0 1 0 4z" fill="currentColor"></path></svg>
-    <p class="text-title">Card title</p>
-    <p class="text-body">Lorem Ipsum dolor sit amet</p>
-  
+    <svg height="24" width="24" viewBox="0 0 24 24" xmlns="../images/home.png"><path d="M0 0h24v24H0z" fill="none"></path><path</path></svg>
+    <p class="text-title">My Place</p>
+    <p class="text-body">${goodapartments[i].more}</p>
   </div>`
     //    document.getElementById(`a${i+1}`).innerHTML+=`<img src=${goodapartments[i].big_image} class="myfirstpic" img >`;
         document.getElementById(`a${i+1}`).innerHTML+=`<div class="under_pic" id="pic${i+1}"></div>`
@@ -52,7 +54,51 @@ function begin(){
        document.getElementById(`pic_right${i+1}`).innerHTML+=`<span class="the_price">מחיר: ${goodapartments[i].price}</span>`;
        document.getElementById(`pic_left${i+1}`).innerHTML+=`<a href=apartment.html?id=${goodapartments[i].id} class="to_look">לצפיה בנכס</a>`; 
     if (goodapartments[i].was_bought=="yes")
-       document.getElementById(`y${i+1}`).style.backgroundImage+=`url("../images/sold.png")`;
+     {  document.getElementById(`y${i+1}`).style.backgroundImage+=`url("../images/sold.png")`;
       
     }
+    }
 }
+
+//רישום
+let bool="false";
+  document.querySelector(".forrishum").onclick=function(){
+    (async () => {
+      const { value: formValues } = await Swal.fire({
+        title: " הכנס שם משתמש וסיסמה",
+        html: `
+          <input id="swal-input1" class="swal2-input" placeholder=" שם">
+          <input id="swal-input2" class="swal2-input" placeholder=" תעודת זהות">
+        `,
+        focusConfirm: false,
+        preConfirm: () => {
+          let x= document.getElementById("swal-input1").value;
+          let y=document.getElementById("swal-input2").value;
+          for(let i=0;i<correntusers.length;i++) 
+          {
+            if(correntusers[i].name==x&&correntusers[i].id==y)
+               { bool="true";
+
+               }    
+          }
+          if(bool=="false")
+          {
+            const newname={
+              name:x,id:y
+            }
+            correntusers.push(newname);
+            const f=JSON.stringify(correntusers);
+            localStorage.setItem("usersarr",f);
+          }
+        }
+      });
+      if (formValues&&bool=="true") {
+        Swal.fire(JSON.stringify('שמך כבר רשום במערכת'));
+      }
+      if (formValues&&bool=="false") {
+        Swal.fire(JSON.stringify('לקוח חדש, פרטיך נרשמו במערכת'));
+      }
+      
+      bool="false";
+  })()
+  }
